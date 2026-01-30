@@ -1,6 +1,10 @@
 import os
 from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
+from langchain_core.globals import set_llm_cache
+from langchain_community.cache import SQLiteCache
+
+set_llm_cache(SQLiteCache(database_path=".langchain_llm_cache.db"))
 
 import streamlit as st
 
@@ -11,7 +15,7 @@ load_dotenv()
 graph = build_graph()
 
 st.set_page_config(page_title="Multi-Agent Support Assistant", layout="wide")
-st.title("📞 Multi-Agent Support Assistant (SQL + Policy PDFs)")
+st.title("Multi-Agent Support Assistant")
 
 st.sidebar.header("1) Upload policy PDFs")
 os.makedirs("policy_uploads", exist_ok=True)

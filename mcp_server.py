@@ -6,6 +6,10 @@ load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 import glob
 from dotenv import load_dotenv
 from fastmcp import FastMCP
+from langchain_core.globals import set_llm_cache
+from langchain_community.cache import SQLiteCache
+
+set_llm_cache(SQLiteCache(database_path=".langchain_llm_cache.db"))
 
 from agents.policy_rag import ingest_pdfs, answer_policy
 from agents.sql_agent import answer_customer
