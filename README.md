@@ -33,9 +33,9 @@ Key design principles:
 - Fail-safe refusal when information is missing
 
 ---
-
 ## 3. Repository Structure
 
+```text
 genai-multiagent-support/
 ├── app_streamlit.py        # Streamlit UI
 ├── mcp_server.py           # MCP tool server
@@ -48,12 +48,13 @@ genai-multiagent-support/
 │   ├── seed_customers.py   # SQLite seed script
 │   └── customers.db
 ├── policy_uploads/         # Uploaded policy PDFs
-├── storage/chroma/         # Persistent vector store
+├── storage/
+│   └── chroma/             # Persistent vector store
 ├── requirements.txt
 ├── .env.example
 └── README.md
+```
 
----
 
 ## 4. Environment Setup
 

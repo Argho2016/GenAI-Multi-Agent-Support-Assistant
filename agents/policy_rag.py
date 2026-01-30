@@ -55,7 +55,7 @@ def ingest_pdfs(pdf_paths: List[str], batch_size: int = 16, sleep_s: float = 0.7
     stores in Chroma. Designed to avoid free-tier 429 during ingestion.
     """
     splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1500,     # fewer chunks helps quota
+        chunk_size=1500,     
         chunk_overlap=150,
         separators=["\n\n", "\n", " ", ""],
     )
