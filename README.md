@@ -55,8 +55,6 @@ genai-multiagent-support/
 └── README.md
 ```
 
-```
-
 
 ## 4. Environment Setup
 
