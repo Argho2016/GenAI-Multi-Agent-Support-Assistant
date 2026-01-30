@@ -35,8 +35,6 @@ Key design principles:
 ---
 ## 3. Repository Structure
 
-## 3. Repository Structure
-
 ```text
 genai-multiagent-support/
 ├── app_streamlit.py        # Streamlit UI
