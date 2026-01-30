@@ -37,7 +37,7 @@ Key design principles:
 ## 3. Repository Structure
 
 ```text
-genai-multiagent-support/
+GenAI-Multi-Agent-Support-Assistant/
 ├── app_streamlit.py        # Streamlit UI
 ├── mcp_server.py           # MCP tool server
 ├── agents/
